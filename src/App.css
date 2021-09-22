@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* global css variables */
+
+:root{
+    --font-one: 'ZCOOL KuaiLe', cursive;
+    --font-two: 'Rampart One', cursive;
+    --font-three: 'Montserrat', sans-serif;
+    --font-four: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #d7e1ec;
+    font-family: var(--font-three);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .button:hover {
+    width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.hashnode{
+    margin-top: 0.9rem;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #0e76a8;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #211F1F;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+    background: #F48024;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+    background: #2962ff;
+    color: white;
+}
+
+.wrapper .button:nth-child(5):hover .icon {
+    background: #1DA1F2;
+}
+
+.wrapper .button:nth-child(6):hover .icon {
+    background: #E1306C;
+}
+
+.wrapper .button:nth-child(7):hover .icon {
+    background: #075E54;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #0e76a8;
+}
+
+.wrapper .button:nth-child(2) span {
+    color: #211F1F;
+}
+
+.wrapper .button:nth-child(3) span {
+    color: #F48024;
+}
+
+.wrapper .button:nth-child(4) span {
+    color: #2962ff;
+}
+
+.wrapper .button:nth-child(5) span {
+    color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(6) span {
+    color: #E1306C;
+}
+
+.wrapper .button:nth-child(7) span {
+    color: #075E54;
+}
+
+footer{
+    box-sizing: border-box;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    font-family: var(--font-four);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+} 
+
+.about{
+    text-align: center;
+}
+
+.about .info{
+    font-weight: bold;
+}
+
+.source{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.source .button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.source .button span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.source .button:hover {
+    height: 105px;
+    width: 170px;
+    border-radius: 15px;
+    color: #2563eb;
+}
+
+.source .button:hover .icon {
+    background: #2563eb;
+    color: white;
+}
+
+.source .button i{
+    line-height: 3rem;
+}
+
+.copyright{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    font-weight: bold;
 }
