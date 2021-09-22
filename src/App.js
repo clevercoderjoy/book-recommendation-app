@@ -5,52 +5,70 @@ var font = "Poppins"
 
 const bookDB = {
   SelfHelp: [
-    { name: "7 Habits of Highly Effective people", rating: "Rating : 5/5" },
-    { name: "How to win friends and influence people", rating: "Rating : 4/5" },
-    { name: "Who moved my cheese?", rating: "Rating : 3.5/5" },
-    { name: "Atomic Habits", rating: "Rating : 4/5" }
+    { name: "Soft Skills by John Sonmez", rating: "Rating : 5/5" },
+    { name: "The power of habbit", rating: "Rating : 3/5" },
+    { name: "Atomic Habits", rating: "Rating : 3.5/5" },
+    { name: "Your brain on porn", rating: "Rating : 4/5" }
   ],
 
-  finance: [
+  Finance: [
     {
-      name: "Almanac of Naval Ravikant",
+      name: "Rich Dad Poor Dad",
       rating: "Rating : 5/5"
+    },
+    {
+      name: "Think and Grow Rich",
+      rating: "Rating : 5/5"
+    },
+    {
+      name: "The monk who sold his farari",
+      rating: "Rating : 4/5"
     },
     {
       name: "Psycology of money",
       rating: "Rating : 5/5"
-    },
-    {
-      name: "Rich Dad Poor Dad",
-      rating: "Rating : 4/5"
-    },
-    {
-      name: "Think and Grow Rich",
-      rating: "Rating : 4/5"
     }
   ],
-  fiction: [
+  Fiction: [
     {
-      name: "Harry Potter Series",
-      rating: "Rating : 4.5/5"
-    },
-    {
-      name: "The DaVinci Code",
+      name: "Marvel",
       rating: "Rating : 5/5"
     },
     {
-      name: "Lord of the Rings",
+      name: "Agatha Cristy",
       rating: "Rating : 3/5"
     },
     {
-      name: "Feluda and Professor Shonku",
+      name: "Game of Thrones",
+      rating: "Rating : 5/5"
+    },
+    {
+      name: "The Flash",
       rating: "Rating : 4/5"
+    }
+  ],
+  Manga: [
+    {
+      name: "Naruto",
+      rating: "Rating : 5/5"
+    },
+    {
+      name: "Boruto - Naruto next generations",
+      rating: "Rating : 5/5"
+    },
+    {
+      name: "Pokemon",
+      rating: "Rating : 5/5"
+    },
+    {
+      name: "Death Note",
+      rating: "Rating : 5/5"
     }
   ]
 };
 
 function App() {
-  const [selectedGenre, setGenre] = useState("fiction");
+  const [selectedGenre, setGenre] = useState("Manga");
   function genreClickHandler(genre) {
     setGenre(genre);
   }
@@ -65,8 +83,7 @@ function App() {
 
       <div style={{textAlign: "center",}}>
         {Object.keys(bookDB).map((genre) => (
-          <button
-            onClick={() => genreClickHandler(genre)}
+          <button key ={genre} onClick={() => genreClickHandler(genre)}
             style={{
               cursor: "pointer",
               background: "#E5E7EB",
